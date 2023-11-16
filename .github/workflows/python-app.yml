@@ -16,6 +16,9 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
+    env:  # Define environment variables at the job level
+     # MY_VARIABLE: "some_value"
+      WORKING_Directory: "another_value"
 
     steps:
     - uses: actions/checkout@v3
@@ -37,4 +40,4 @@ jobs:
     - name: Test with pytest
       run: |
         python test.py
-      working-directory: /gpat/devops/
+#      working-directory: /gpat/devops/
